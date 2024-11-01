@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Coyanco Spa</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1c1c1c; /* Negro */
+            color: #d4af37; /* Dorado */
+        }
+        .navbar-brand, .nav-link {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            color: #DAA520 !important; /* Dorado */
+        }
+        .navbar {
+            background-color: #000; /* Negro */
+            border-bottom: 2px solid #DAA520; /* Borde inferior dorado */
+        }
+        .navbar-light .navbar-nav .nav-link:hover {
+            color: #C0C0C0 !important; /* Plata */
+        }
+        .form-control {
+            border: 1px solid #d4af37; /* Bordes dorados */
+            background-color: #333; /* Fondo oscuro */
+            color: #DAA520; /* Texto dorado */
+            /* Eliminar la fuente para usar la por defecto */
+        }
+        .form-control::placeholder {
+            color: #DAA520; /* Placeholder dorado */
+        }
+        .btn-primary {
+            background-color: #DAA520;
+            color: #1c1c1c; /* Texto negro */
+            border: none;
+            /* Eliminar la fuente para usar la por defecto */
+        }
+        .btn-primary:hover {
+            background-color: #c0c0c0; /* Plata */
+        }
+        footer {
+            background-color: #000; /* Fondo negro */
+            color: #d4af37;
+            padding: 20px 0;
+        }
+        footer p {
+            margin: 0;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            color: #DAA520 !important; /* Dorado */
+        }
+        .navbar-nav .nav-item {
+            border-right: 1px solid #DAA520; /* Borde dorado entre items */
+        }
+    </style>
+    
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand">
+            <img src="/fotos/redimensionadas/logo3.png" alt="Logo de Coyanco" style="height: 50px; width: auto;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="quienes_somos.html">Sobre Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Proyectos Ejecutados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Formulario de contacto -->
+    <div class="container mt-5" style="margin-top: 80px;">
+        <h1 class="text-center mb-4" style="color: #DAA520; font-size: 2.5rem;">Contáctanos</h1>
+        <form id="contactForm" action="mailto:contacto@coyanco.cl" method="post" enctype="text/plain" onsubmit="return showThankYouMessage();">
+            <div class="form-group">
+                <label for="nombre" style="font-size: 1.4rem; color: #DAA520;">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="correo" style="font-size: 1.4rem; color: #DAA520;">Correo Electrónico</label>
+                <input type="email" class="form-control" id="correo" placeholder="Ingresa tu correo" required>
+            </div>
+            <div class="form-group">
+                <label for="mensaje" style="font-size: 1.4rem; color: #DAA520;">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="font-size: 2rem; font-weight: bold;">Enviar</button>
+        </form>
+        <div id="thankYouMessage" class="text-center mt-4" style="display: none; color: #DAA520; font-size: 1.8rem;">
+            Gracias por tu consulta, te contactaremos pronto.
+        </div>
+    </div>
+    
+    
+    
+
+    <script>
+        function showThankYouMessage() {
+            // Ocultar el formulario
+            document.getElementById('contactForm').style.display = 'none';
+            // Mostrar el mensaje de agradecimiento
+            document.getElementById('thankYouMessage').style.display = 'block';
+            return false; // Previene el envío del formulario
+        }
+    </script>
+
+
+    <!-- Footer -->
+    <footer class="text-center mt-5">
+        <p>© 2024 Coyanco. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
