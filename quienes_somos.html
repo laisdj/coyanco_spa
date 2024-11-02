@@ -9,6 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
             background-color: #1c1c1c; /* Negro */
@@ -56,6 +57,22 @@
         .navbar-nav .nav-item {
             border-right: 1px solid #DAA520; /* Borde dorado entre items */
         }
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px; /* Distancia desde la parte inferior */
+            right: 20px; /* Distancia desde la derecha */
+            background-color: #25D366; /* Color de fondo de WhatsApp */
+            color: white; /* Color del ícono */
+            border-radius: 50%; /* Bordes redondeados */
+            padding: 15px; /* Espaciado interno */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
+            z-index: 1000; /* Asegura que esté encima de otros elementos */
+            transition: background-color 0.3s; /* Animación suave en el hover */
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128C7E; /* Color de fondo al pasar el mouse */
+        }
     </style>
 </head>
 <body>
@@ -63,7 +80,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <a class="navbar-brand">
-            <img src="https://laisdj.github.io/coyanco_spa/fotos/redimensionadas/logo3.png" alt="Logo de Coyanco" style="height: 50px; width: auto;">
+            <img src="/fotos/redimensionadas/logo3.png" alt="Logo de Coyanco" style="height: 50px; width: auto;">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -86,7 +103,9 @@
         </div>
     </nav>
 
-    <div class="container mt-5" style="margin-top: 80px;"> <!-- Ajusta el margen superior -->
+    <div class="container mt-5" style="margin-top: 100px;"> <!-- Ajusta el margen superior -->
+        <br>
+        <br>
         <h1 class="text-center mb-4">¿Quiénes Somos?</h1>
         <p class="text-justify">
             Bienvenidos a Coyanco, una empresa constructora ubicada en el hermoso sur de Chile, en la ciudad de Puerto Varas. Nos especializamos en la construcción de viviendas de alta calidad, utilizando materiales livianos y tecnologías innovadoras que garantizan durabilidad y confort.
@@ -114,5 +133,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <a href="https://wa.me/+56998867371" target="_blank" class="whatsapp-button">
+        <i class="fab fa-whatsapp fa-3x"></i>
+    </a>
 </body>
 </html>

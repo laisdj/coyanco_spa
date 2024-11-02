@@ -12,6 +12,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
+    
 
     <style>
         body {
@@ -61,7 +62,7 @@
             object-fit: cover;
         }
         .card {
-            background-color: #333;
+            background-color: #1c1c1c;
             border: 1px solid #d4af37;
         }
         .card-title {
@@ -103,14 +104,31 @@
             font-size: 1.8rem; /* Ajusta el tamaño al gusto */
             color: #DAA520 !important; /* Dorado */
         }
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px; /* Distancia desde la parte inferior */
+            right: 20px; /* Distancia desde la derecha */
+            background-color: #25D366; /* Color de fondo de WhatsApp */
+            color: white; /* Color del ícono */
+            border-radius: 50%; /* Bordes redondeados */
+            padding: 15px; /* Espaciado interno */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
+            z-index: 1000; /* Asegura que esté encima de otros elementos */
+            transition: background-color 0.3s; /* Animación suave en el hover */
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128C7E; /* Color de fondo al pasar el mouse */
+        }
     </style>
 </head>
+
 <body>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <a class="navbar-brand">
-            <img src="https://laisdj.github.io/coyanco_spa/fotos/redimensionadas/logo3.png" alt="Logo de Coyanco" style="height: 50px; width: auto;">
+            <img src="/fotos/redimensionadas/logo3.png" alt="Logo de Coyanco" style="height: 50px; width: auto;">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -138,6 +156,10 @@
 
     <!-- Header con Carrusel de Imágenes -->
     <header class="container mt-4">
+        <br>
+        <br>
+        <br>
+        <br>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -231,6 +253,8 @@
             </a>
         </div>
     </footer>
-
+    <a href="https://wa.me/+56998867371" target="_blank" class="whatsapp-button">
+        <i class="fab fa-whatsapp fa-3x"></i>
+    </a>
 </body>
 </html>
